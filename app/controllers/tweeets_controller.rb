@@ -3,7 +3,11 @@ class TweeetsController < ApplicationController
 
   def create
     @tweeet = Tweeet.new(tweeet_params)
-    render json: @tweeet.as_json
+    if @tweeet.save
+      render json: @tweeet.as_json
+    else
+        render json: @tweeet.errors.full_messages, status: :unprocessable_entity
+    end
   end
 
   def update

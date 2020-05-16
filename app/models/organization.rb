@@ -12,4 +12,7 @@ class Organization < ApplicationRecord
 
   #Associations
   has_many :users
+
+  #Validations
+  validates :name, uniqueness: true, presence: true
 end
