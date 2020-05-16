@@ -6,7 +6,7 @@ class OrganizationsController < ApplicationController
     if @organization.save
       render json: @organization.as_json
     else
-        render json: @organization.errors.full_messages, status: :unprocessable_entity
+      render json: @organization.errors.full_messages, status: :unprocessable_entity
     end
   end
 

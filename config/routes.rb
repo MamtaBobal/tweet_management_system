@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { sessions: :sessions },
+  devise_for :users, controllers: { sessions: :sessions, passwords: :passwords },
                      path_names: { sign_in: :login }
 
   resources :tweeets
