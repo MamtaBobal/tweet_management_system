@@ -27,4 +27,5 @@ class User < ApplicationRecord
 
   # Associations
   has_many :tweeets
+  belongs_to :organization
 end
