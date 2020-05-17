@@ -6,6 +6,9 @@ RSpec.describe Tweeet, type: :model do
   
   # Association test
   it { should belong_to(:user) }
+
+  # Validation test
+  it { should validate_presence_of(:tweet) }
  
   describe "public instance methods" do
     context "responds to its methods" do

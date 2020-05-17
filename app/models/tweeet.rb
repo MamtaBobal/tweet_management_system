@@ -14,6 +14,9 @@ class Tweeet < ApplicationRecord
   #Associations
   belongs_to :user
 
+  #Validations
+  validates :tweet, presence: true
+
   def is_owner(user_id)
     self.user_id == user_id
   end
