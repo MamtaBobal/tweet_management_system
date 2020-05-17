@@ -7,6 +7,7 @@ class PasswordsController < ApplicationController
       user = User.find_by(email: params[:email])
       if user.present?
         user.generate_password_token
+        render json: { status: 'Reset Password Token Updated in User Object' }, status: :ok
       else
         render json: { message: 'Email address not found' }, status: :unprocessable_entity
       end

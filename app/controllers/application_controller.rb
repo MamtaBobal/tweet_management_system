@@ -6,10 +6,6 @@ class ApplicationController < ActionController::Base
 
   private
 
-  # def authenticate_user!(options = {})
-  #   head :unauthorized unless signed_in?
-  # end
-
   def current_user
     @current_user ||= super || User.find(@current_user_id)
   end

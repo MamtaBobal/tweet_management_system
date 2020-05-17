@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { sessions: :sessions },
                      path_names: { sign_in: :login }
 
-  post 'password/edit', to: 'password#edit'
-  post 'password/update', to: 'password#update'
+  put 'password/edit', to: 'passwords#edit'
+  put 'password/update', to: 'passwords#update'
 
   resources :tweeets
   resources :organizations

@@ -1,24 +1,24 @@
-# README
+== README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Tweeet Management System
 
-Things you may want to cover:
+This is a simple ruby on rails application with user, tweeets and organization.
+There are 2 types of users: admin and non-admin.
+User's organization will be added at sign up only.
+Postman Documentation Link: https://web.postman.co/collections/1370099-075e8624-58a2-4300-9294-bd72f81ad216?version=latest&workspace=6c58fa16-1a01-4fd5-8fe0-c67420fb144b
 
-* Ruby version
+## Dependencies
+            * Ruby Version    : 2.6.3
+            * Rails           : 6.0.3
+            * RSpec
 
-* System dependencies
+## Installation
+            $ git clone https://github.com/MamtaBobal/tweet_management_system.git
+            $ bundle install
+            $ rake db:create
+            $ rake db:migrate
+            $ rake db:seed
+            $ rails server
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Tests
+            $ rspec
